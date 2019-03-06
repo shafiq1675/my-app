@@ -1,0 +1,13 @@
+
+
+<div *ngIf="khan">
+  <h5> Details <br />{{khan.name| uppercase}} </h5>
+  <div><span>id: </span>{{khan.id}}</div>
+  <div><span>name: </span>{{khan.name}}</div>
+  <label>
+    Name:
+    <input [(ngModel)]="khan.name" placeholder="name" id="khanName" />
+
+    <button (click)="saveData()">Save</button>
+  </label>
+</div>

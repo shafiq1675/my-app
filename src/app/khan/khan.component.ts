@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Khan } from '../khan';
 import { KHANS } from '../mock-khans';
 import { Event } from '@angular/router';
@@ -19,9 +19,15 @@ export class KhanComponent implements OnInit {
 
   }
 
+  @ViewChild('khanName') myName: ElementRef;
+
+  saveData(): void {
+    alert(this.myName.nativeElement);
+  }
+
   onSelectName(khan: Event): void {
 
-    //alert(khan.target.value);    
+    alert(khan);    
 
   }
 
